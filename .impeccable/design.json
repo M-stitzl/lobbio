@@ -1,0 +1,990 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T21:44:47.391Z",
+  "title": "Design System: Lobbio",
+  "extensions": {
+    "scopes": {
+      "app": {
+        "prefix": "app-",
+        "paths": [
+          "app/dashboard/**",
+          "components/pms/**",
+          "component/Sidebar.tsx"
+        ],
+        "name": "Interne App (Der Rezeptionstresen)"
+      },
+      "portal": {
+        "prefix": "portal-",
+        "paths": [
+          "app/buchen/[slug]/**"
+        ],
+        "name": "Buchungsportal (Die Ansichtskarte)",
+        "runtimeTokens": {
+          "--accent": "hotels.accent_color (Default #2f5d50)",
+          "--on-accent": "Luminanz > 0.4 ? #1b1e21 : #ffffff",
+          "--font-lettering": "Barlow Condensed 600/700 via next/font"
+        }
+      }
+    },
+    "colorMeta": {
+      "app-action": {
+        "role": "primary",
+        "displayName": "Rezeptionsgrün",
+        "canonical": "#047857",
+        "tonalRamp": [
+          "oklch(15.0% 0.029 165.6)",
+          "oklch(26.0% 0.050 165.6)",
+          "oklch(37.0% 0.071 165.6)",
+          "oklch(48.0% 0.092 165.6)",
+          "oklch(60.0% 0.095 165.6)",
+          "oklch(72.0% 0.073 165.6)",
+          "oklch(84.0% 0.050 165.6)",
+          "oklch(95.0% 0.029 165.6)"
+        ]
+      },
+      "app-action-deep": {
+        "role": "primary",
+        "displayName": "Rezeptionsgrün tief",
+        "canonical": "#065f46",
+        "tonalRamp": [
+          "oklch(15.0% 0.024 166.9)",
+          "oklch(26.0% 0.041 166.9)",
+          "oklch(37.0% 0.058 166.9)",
+          "oklch(48.0% 0.075 166.9)",
+          "oklch(60.0% 0.079 166.9)",
+          "oklch(72.0% 0.060 166.9)",
+          "oklch(84.0% 0.041 166.9)",
+          "oklch(95.0% 0.024 166.9)"
+        ]
+      },
+      "app-action-focus": {
+        "role": "primary",
+        "displayName": "Rezeptionsgrün Fokus",
+        "canonical": "#059669",
+        "tonalRamp": [
+          "oklch(15.0% 0.035 163.2)",
+          "oklch(26.0% 0.060 163.2)",
+          "oklch(37.0% 0.086 163.2)",
+          "oklch(48.0% 0.111 163.2)",
+          "oklch(60.0% 0.116 163.2)",
+          "oklch(72.0% 0.088 163.2)",
+          "oklch(84.0% 0.060 163.2)",
+          "oklch(95.0% 0.035 163.2)"
+        ]
+      },
+      "app-action-wash": {
+        "role": "neutral",
+        "displayName": "Rezeptionsgrün Wäsche",
+        "canonical": "#ecfdf5",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 166.1)",
+          "oklch(26.0% 0.010 166.1)",
+          "oklch(37.0% 0.014 166.1)",
+          "oklch(48.0% 0.018 166.1)",
+          "oklch(60.0% 0.019 166.1)",
+          "oklch(72.0% 0.014 166.1)",
+          "oklch(84.0% 0.010 166.1)",
+          "oklch(95.0% 0.006 166.1)"
+        ]
+      },
+      "app-ink": {
+        "role": "neutral",
+        "displayName": "Slate-Tinte",
+        "canonical": "#1e293b",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 260.0)",
+          "oklch(26.0% 0.017 260.0)",
+          "oklch(37.0% 0.025 260.0)",
+          "oklch(48.0% 0.032 260.0)",
+          "oklch(60.0% 0.033 260.0)",
+          "oklch(72.0% 0.025 260.0)",
+          "oklch(84.0% 0.017 260.0)",
+          "oklch(95.0% 0.010 260.0)"
+        ]
+      },
+      "app-ink-soft": {
+        "role": "neutral",
+        "displayName": "Slate-Tinte weich",
+        "canonical": "#334155",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 257.3)",
+          "oklch(26.0% 0.019 257.3)",
+          "oklch(37.0% 0.026 257.3)",
+          "oklch(48.0% 0.034 257.3)",
+          "oklch(60.0% 0.036 257.3)",
+          "oklch(72.0% 0.027 257.3)",
+          "oklch(84.0% 0.019 257.3)",
+          "oklch(95.0% 0.011 257.3)"
+        ]
+      },
+      "app-text-muted": {
+        "role": "neutral",
+        "displayName": "Slate gedämpft",
+        "canonical": "#64748b",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 257.4)",
+          "oklch(26.0% 0.019 257.4)",
+          "oklch(37.0% 0.027 257.4)",
+          "oklch(48.0% 0.036 257.4)",
+          "oklch(60.0% 0.037 257.4)",
+          "oklch(72.0% 0.028 257.4)",
+          "oklch(84.0% 0.019 257.4)",
+          "oklch(95.0% 0.011 257.4)"
+        ]
+      },
+      "app-icon-muted": {
+        "role": "neutral",
+        "displayName": "Slate Icon",
+        "canonical": "#94a3b8",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 256.8)",
+          "oklch(26.0% 0.017 256.8)",
+          "oklch(37.0% 0.024 256.8)",
+          "oklch(48.0% 0.031 256.8)",
+          "oklch(60.0% 0.032 256.8)",
+          "oklch(72.0% 0.024 256.8)",
+          "oklch(84.0% 0.017 256.8)",
+          "oklch(95.0% 0.010 256.8)"
+        ]
+      },
+      "app-border": {
+        "role": "neutral",
+        "displayName": "Slate-Kante",
+        "canonical": "#e2e8f0",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 255.5)",
+          "oklch(26.0% 0.006 255.5)",
+          "oklch(37.0% 0.008 255.5)",
+          "oklch(48.0% 0.011 255.5)",
+          "oklch(60.0% 0.011 255.5)",
+          "oklch(72.0% 0.009 255.5)",
+          "oklch(84.0% 0.006 255.5)",
+          "oklch(95.0% 0.003 255.5)"
+        ]
+      },
+      "app-input-border": {
+        "role": "neutral",
+        "displayName": "Slate-Eingabekante",
+        "canonical": "#cbd5e1",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 252.9)",
+          "oklch(26.0% 0.009 252.9)",
+          "oklch(37.0% 0.013 252.9)",
+          "oklch(48.0% 0.017 252.9)",
+          "oklch(60.0% 0.018 252.9)",
+          "oklch(72.0% 0.014 252.9)",
+          "oklch(84.0% 0.009 252.9)",
+          "oklch(95.0% 0.005 252.9)"
+        ]
+      },
+      "app-row-divider": {
+        "role": "neutral",
+        "displayName": "Slate-Zeilentrenner",
+        "canonical": "#f1f5f9",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 247.9)",
+          "oklch(26.0% 0.003 247.9)",
+          "oklch(37.0% 0.005 247.9)",
+          "oklch(48.0% 0.006 247.9)",
+          "oklch(60.0% 0.006 247.9)",
+          "oklch(72.0% 0.005 247.9)",
+          "oklch(84.0% 0.003 247.9)",
+          "oklch(95.0% 0.002 247.9)"
+        ]
+      },
+      "app-canvas": {
+        "role": "neutral",
+        "displayName": "App-Canvas",
+        "canonical": "#f8fafc",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 247.9)",
+          "oklch(26.0% 0.002 247.9)",
+          "oklch(37.0% 0.002 247.9)",
+          "oklch(48.0% 0.003 247.9)",
+          "oklch(60.0% 0.003 247.9)",
+          "oklch(72.0% 0.002 247.9)",
+          "oklch(84.0% 0.002 247.9)",
+          "oklch(95.0% 0.001 247.9)"
+        ]
+      },
+      "app-surface": {
+        "role": "neutral",
+        "displayName": "Panelweiß",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(26.0% 0.000 89.9)",
+          "oklch(37.0% 0.000 89.9)",
+          "oklch(48.0% 0.000 89.9)",
+          "oklch(60.0% 0.000 89.9)",
+          "oklch(72.0% 0.000 89.9)",
+          "oklch(84.0% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "app-danger": {
+        "role": "tertiary",
+        "displayName": "Fehlerrot",
+        "canonical": "#b91c1c",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 27.5)",
+          "oklch(26.0% 0.090 27.5)",
+          "oklch(37.0% 0.128 27.5)",
+          "oklch(48.0% 0.166 27.5)",
+          "oklch(60.0% 0.173 27.5)",
+          "oklch(72.0% 0.132 27.5)",
+          "oklch(84.0% 0.090 27.5)",
+          "oklch(95.0% 0.052 27.5)"
+        ]
+      },
+      "app-warning-wash": {
+        "role": "tertiary",
+        "displayName": "Amber-Wäsche",
+        "canonical": "#fffbeb",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 95.3)",
+          "oklch(26.0% 0.010 95.3)",
+          "oklch(37.0% 0.014 95.3)",
+          "oklch(48.0% 0.019 95.3)",
+          "oklch(60.0% 0.019 95.3)",
+          "oklch(72.0% 0.015 95.3)",
+          "oklch(84.0% 0.010 95.3)",
+          "oklch(95.0% 0.006 95.3)"
+        ]
+      },
+      "app-warning-ink": {
+        "role": "tertiary",
+        "displayName": "Amber-Tinte",
+        "canonical": "#92400e",
+        "tonalRamp": [
+          "oklch(15.0% 0.034 46.2)",
+          "oklch(26.0% 0.059 46.2)",
+          "oklch(37.0% 0.084 46.2)",
+          "oklch(48.0% 0.109 46.2)",
+          "oklch(60.0% 0.113 46.2)",
+          "oklch(72.0% 0.086 46.2)",
+          "oklch(84.0% 0.059 46.2)",
+          "oklch(95.0% 0.034 46.2)"
+        ]
+      },
+      "app-arrival-blue": {
+        "role": "secondary",
+        "displayName": "Ankunftsblau",
+        "canonical": "#0284c7",
+        "tonalRamp": [
+          "oklch(15.0% 0.038 242.0)",
+          "oklch(26.0% 0.066 242.0)",
+          "oklch(37.0% 0.093 242.0)",
+          "oklch(48.0% 0.121 242.0)",
+          "oklch(60.0% 0.126 242.0)",
+          "oklch(72.0% 0.096 242.0)",
+          "oklch(84.0% 0.066 242.0)",
+          "oklch(95.0% 0.038 242.0)"
+        ]
+      },
+      "portal-accent-default": {
+        "role": "primary",
+        "displayName": "Hotelakzent (Vorgabe Tannengrün)",
+        "canonical": "#2f5d50",
+        "tonalRamp": [
+          "oklch(15.0% 0.015 173.2)",
+          "oklch(26.0% 0.026 173.2)",
+          "oklch(37.0% 0.037 173.2)",
+          "oklch(48.0% 0.048 173.2)",
+          "oklch(60.0% 0.051 173.2)",
+          "oklch(72.0% 0.038 173.2)",
+          "oklch(84.0% 0.026 173.2)",
+          "oklch(95.0% 0.015 173.2)"
+        ],
+        "note": "Laufzeitwert ist var(--accent) aus hotels.accent_color; Schrift darauf var(--on-accent) per Luminanzschwelle 0,4."
+      },
+      "portal-on-accent-dark": {
+        "role": "neutral",
+        "displayName": "Schrift auf hellem Akzent",
+        "canonical": "#1b1e21",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 248.1)",
+          "oklch(26.0% 0.003 248.1)",
+          "oklch(37.0% 0.005 248.1)",
+          "oklch(48.0% 0.006 248.1)",
+          "oklch(60.0% 0.007 248.1)",
+          "oklch(72.0% 0.005 248.1)",
+          "oklch(84.0% 0.003 248.1)",
+          "oklch(95.0% 0.002 248.1)"
+        ]
+      },
+      "portal-on-accent-light": {
+        "role": "neutral",
+        "displayName": "Schrift auf dunklem Akzent",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(26.0% 0.000 89.9)",
+          "oklch(37.0% 0.000 89.9)",
+          "oklch(48.0% 0.000 89.9)",
+          "oklch(60.0% 0.000 89.9)",
+          "oklch(72.0% 0.000 89.9)",
+          "oklch(84.0% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "portal-postgrau": {
+        "role": "neutral",
+        "displayName": "Postgrau",
+        "canonical": "#e9ecea",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 157.2)",
+          "oklch(26.0% 0.002 157.2)",
+          "oklch(37.0% 0.003 157.2)",
+          "oklch(48.0% 0.004 157.2)",
+          "oklch(60.0% 0.004 157.2)",
+          "oklch(72.0% 0.003 157.2)",
+          "oklch(84.0% 0.002 157.2)",
+          "oklch(95.0% 0.001 157.2)"
+        ]
+      },
+      "portal-kartenweiss": {
+        "role": "neutral",
+        "displayName": "Kartenweiß",
+        "canonical": "#fbfaf7",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 91.4)",
+          "oklch(26.0% 0.002 91.4)",
+          "oklch(37.0% 0.003 91.4)",
+          "oklch(48.0% 0.004 91.4)",
+          "oklch(60.0% 0.004 91.4)",
+          "oklch(72.0% 0.003 91.4)",
+          "oklch(84.0% 0.002 91.4)",
+          "oklch(95.0% 0.001 91.4)"
+        ]
+      },
+      "portal-footer-grau": {
+        "role": "neutral",
+        "displayName": "Fußgrau",
+        "canonical": "#e1e5e3",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 165.0)",
+          "oklch(26.0% 0.002 165.0)",
+          "oklch(37.0% 0.003 165.0)",
+          "oklch(48.0% 0.004 165.0)",
+          "oklch(60.0% 0.005 165.0)",
+          "oklch(72.0% 0.003 165.0)",
+          "oklch(84.0% 0.002 165.0)",
+          "oklch(95.0% 0.001 165.0)"
+        ]
+      },
+      "portal-control-white": {
+        "role": "neutral",
+        "displayName": "Bedienweiß",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(26.0% 0.000 89.9)",
+          "oklch(37.0% 0.000 89.9)",
+          "oklch(48.0% 0.000 89.9)",
+          "oklch(60.0% 0.000 89.9)",
+          "oklch(72.0% 0.000 89.9)",
+          "oklch(84.0% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "portal-ink": {
+        "role": "neutral",
+        "displayName": "Kartentinte",
+        "canonical": "#22262a",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 248.2)",
+          "oklch(26.0% 0.004 248.2)",
+          "oklch(37.0% 0.006 248.2)",
+          "oklch(48.0% 0.008 248.2)",
+          "oklch(60.0% 0.009 248.2)",
+          "oklch(72.0% 0.007 248.2)",
+          "oklch(84.0% 0.004 248.2)",
+          "oklch(95.0% 0.003 248.2)"
+        ]
+      },
+      "portal-ink-body": {
+        "role": "neutral",
+        "displayName": "Kartentinte Text",
+        "canonical": "#3a4045",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 243.1)",
+          "oklch(26.0% 0.006 243.1)",
+          "oklch(37.0% 0.008 243.1)",
+          "oklch(48.0% 0.010 243.1)",
+          "oklch(60.0% 0.011 243.1)",
+          "oklch(72.0% 0.008 243.1)",
+          "oklch(84.0% 0.006 243.1)",
+          "oklch(95.0% 0.003 243.1)"
+        ]
+      },
+      "portal-ink-muted": {
+        "role": "neutral",
+        "displayName": "Kartentinte gedämpft",
+        "canonical": "#4a5055",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 243.1)",
+          "oklch(26.0% 0.005 243.1)",
+          "oklch(37.0% 0.008 243.1)",
+          "oklch(48.0% 0.010 243.1)",
+          "oklch(60.0% 0.010 243.1)",
+          "oklch(72.0% 0.008 243.1)",
+          "oklch(84.0% 0.005 243.1)",
+          "oklch(95.0% 0.003 243.1)"
+        ]
+      },
+      "portal-ink-quiet": {
+        "role": "neutral",
+        "displayName": "Kartentinte leise",
+        "canonical": "#5a6065",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 243.0)",
+          "oklch(26.0% 0.005 243.0)",
+          "oklch(37.0% 0.007 243.0)",
+          "oklch(48.0% 0.010 243.0)",
+          "oklch(60.0% 0.010 243.0)",
+          "oklch(72.0% 0.008 243.0)",
+          "oklch(84.0% 0.005 243.0)",
+          "oklch(95.0% 0.003 243.0)"
+        ]
+      },
+      "portal-icon-grau": {
+        "role": "neutral",
+        "displayName": "Feldicon-Grau",
+        "canonical": "#6b7176",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 243.0)",
+          "oklch(26.0% 0.005 243.0)",
+          "oklch(37.0% 0.007 243.0)",
+          "oklch(48.0% 0.009 243.0)",
+          "oklch(60.0% 0.010 243.0)",
+          "oklch(72.0% 0.007 243.0)",
+          "oklch(84.0% 0.005 243.0)",
+          "oklch(95.0% 0.003 243.0)"
+        ]
+      },
+      "portal-hairline": {
+        "role": "neutral",
+        "displayName": "Kartenkante",
+        "canonical": "#dfe3e1",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 165.0)",
+          "oklch(26.0% 0.002 165.0)",
+          "oklch(37.0% 0.003 165.0)",
+          "oklch(48.0% 0.004 165.0)",
+          "oklch(60.0% 0.005 165.0)",
+          "oklch(72.0% 0.003 165.0)",
+          "oklch(84.0% 0.002 165.0)",
+          "oklch(95.0% 0.001 165.0)"
+        ]
+      },
+      "portal-address-rule": {
+        "role": "neutral",
+        "displayName": "Adresslinie",
+        "canonical": "#cfd5d2",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 164.9)",
+          "oklch(26.0% 0.004 164.9)",
+          "oklch(37.0% 0.005 164.9)",
+          "oklch(48.0% 0.007 164.9)",
+          "oklch(60.0% 0.007 164.9)",
+          "oklch(72.0% 0.005 164.9)",
+          "oklch(84.0% 0.004 164.9)",
+          "oklch(95.0% 0.002 164.9)"
+        ]
+      },
+      "portal-input-border": {
+        "role": "neutral",
+        "displayName": "Eingabekante",
+        "canonical": "#c3c9c6",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 164.9)",
+          "oklch(26.0% 0.004 164.9)",
+          "oklch(37.0% 0.005 164.9)",
+          "oklch(48.0% 0.007 164.9)",
+          "oklch(60.0% 0.007 164.9)",
+          "oklch(72.0% 0.005 164.9)",
+          "oklch(84.0% 0.004 164.9)",
+          "oklch(95.0% 0.002 164.9)"
+        ]
+      },
+      "portal-control-border": {
+        "role": "neutral",
+        "displayName": "Bedienkante",
+        "canonical": "#c9cfcc",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 164.9)",
+          "oklch(26.0% 0.004 164.9)",
+          "oklch(37.0% 0.005 164.9)",
+          "oklch(48.0% 0.007 164.9)",
+          "oklch(60.0% 0.007 164.9)",
+          "oklch(72.0% 0.005 164.9)",
+          "oklch(84.0% 0.004 164.9)",
+          "oklch(95.0% 0.002 164.9)"
+        ]
+      },
+      "portal-hover-wash": {
+        "role": "neutral",
+        "displayName": "Hover-Wäsche",
+        "canonical": "#f3f5f4",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 165.1)",
+          "oklch(26.0% 0.001 165.1)",
+          "oklch(37.0% 0.002 165.1)",
+          "oklch(48.0% 0.002 165.1)",
+          "oklch(60.0% 0.002 165.1)",
+          "oklch(72.0% 0.002 165.1)",
+          "oklch(84.0% 0.001 165.1)",
+          "oklch(95.0% 0.001 165.1)"
+        ]
+      },
+      "portal-info-wash": {
+        "role": "neutral",
+        "displayName": "Hinweisgrau",
+        "canonical": "#f0f2f1",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 165.1)",
+          "oklch(26.0% 0.001 165.1)",
+          "oklch(37.0% 0.002 165.1)",
+          "oklch(48.0% 0.002 165.1)",
+          "oklch(60.0% 0.002 165.1)",
+          "oklch(72.0% 0.002 165.1)",
+          "oklch(84.0% 0.001 165.1)",
+          "oklch(95.0% 0.001 165.1)"
+        ]
+      },
+      "portal-stempeltinte": {
+        "role": "secondary",
+        "displayName": "Stempeltinte Violettblau",
+        "canonical": "#3d3a6e",
+        "tonalRamp": [
+          "oklch(15.0% 0.024 284.0)",
+          "oklch(26.0% 0.041 284.0)",
+          "oklch(37.0% 0.059 284.0)",
+          "oklch(48.0% 0.076 284.0)",
+          "oklch(60.0% 0.079 284.0)",
+          "oklch(72.0% 0.060 284.0)",
+          "oklch(84.0% 0.041 284.0)",
+          "oklch(95.0% 0.024 284.0)"
+        ]
+      },
+      "portal-markenrot": {
+        "role": "tertiary",
+        "displayName": "Markenrot",
+        "canonical": "#8e2f1f",
+        "tonalRamp": [
+          "oklch(15.0% 0.036 32.0)",
+          "oklch(26.0% 0.062 32.0)",
+          "oklch(37.0% 0.089 32.0)",
+          "oklch(48.0% 0.115 32.0)",
+          "oklch(60.0% 0.120 32.0)",
+          "oklch(72.0% 0.091 32.0)",
+          "oklch(84.0% 0.062 32.0)",
+          "oklch(95.0% 0.036 32.0)"
+        ]
+      },
+      "portal-markenrot-wash": {
+        "role": "tertiary",
+        "displayName": "Markenrot-Wäsche",
+        "canonical": "#f8e3de",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 33.5)",
+          "oklch(26.0% 0.011 33.5)",
+          "oklch(37.0% 0.016 33.5)",
+          "oklch(48.0% 0.021 33.5)",
+          "oklch(60.0% 0.022 33.5)",
+          "oklch(72.0% 0.017 33.5)",
+          "oklch(84.0% 0.011 33.5)",
+          "oklch(95.0% 0.007 33.5)"
+        ]
+      },
+      "portal-markenrot-line": {
+        "role": "tertiary",
+        "displayName": "Markenrot-Linie",
+        "canonical": "#b8432f",
+        "tonalRamp": [
+          "oklch(15.0% 0.042 32.0)",
+          "oklch(26.0% 0.073 32.0)",
+          "oklch(37.0% 0.105 32.0)",
+          "oklch(48.0% 0.136 32.0)",
+          "oklch(60.0% 0.141 32.0)",
+          "oklch(72.0% 0.107 32.0)",
+          "oklch(84.0% 0.073 32.0)",
+          "oklch(95.0% 0.042 32.0)"
+        ]
+      },
+      "portal-frei-wash": {
+        "role": "neutral",
+        "displayName": "Frei-Grün Wäsche",
+        "canonical": "#e6efe9",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 157.0)",
+          "oklch(26.0% 0.006 157.0)",
+          "oklch(37.0% 0.008 157.0)",
+          "oklch(48.0% 0.011 157.0)",
+          "oklch(60.0% 0.011 157.0)",
+          "oklch(72.0% 0.009 157.0)",
+          "oklch(84.0% 0.006 157.0)",
+          "oklch(95.0% 0.003 157.0)"
+        ]
+      },
+      "portal-frei-ink": {
+        "role": "neutral",
+        "displayName": "Frei-Grün",
+        "canonical": "#24563d",
+        "tonalRamp": [
+          "oklch(15.0% 0.019 159.3)",
+          "oklch(26.0% 0.033 159.3)",
+          "oklch(37.0% 0.046 159.3)",
+          "oklch(48.0% 0.060 159.3)",
+          "oklch(60.0% 0.063 159.3)",
+          "oklch(72.0% 0.048 159.3)",
+          "oklch(84.0% 0.033 159.3)",
+          "oklch(95.0% 0.019 159.3)"
+        ]
+      },
+      "portal-hinweis-wash": {
+        "role": "neutral",
+        "displayName": "Hinweis-Ocker Wäsche",
+        "canonical": "#fdf3e3",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 79.7)",
+          "oklch(26.0% 0.011 79.7)",
+          "oklch(37.0% 0.016 79.7)",
+          "oklch(48.0% 0.021 79.7)",
+          "oklch(60.0% 0.022 79.7)",
+          "oklch(72.0% 0.016 79.7)",
+          "oklch(84.0% 0.011 79.7)",
+          "oklch(95.0% 0.006 79.7)"
+        ]
+      },
+      "portal-hinweis-ink": {
+        "role": "neutral",
+        "displayName": "Hinweis-Ocker",
+        "canonical": "#7a4a12",
+        "tonalRamp": [
+          "oklch(15.0% 0.025 64.4)",
+          "oklch(26.0% 0.044 64.4)",
+          "oklch(37.0% 0.063 64.4)",
+          "oklch(48.0% 0.082 64.4)",
+          "oklch(60.0% 0.085 64.4)",
+          "oklch(72.0% 0.065 64.4)",
+          "oklch(84.0% 0.044 64.4)",
+          "oklch(95.0% 0.025 64.4)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "app-headline": {
+        "displayName": "App Seitentitel",
+        "purpose": "Seitentitel im Dashboard/PMS."
+      },
+      "app-title": {
+        "displayName": "App Paneltitel",
+        "purpose": "Panel- und Drawer-Titel."
+      },
+      "app-body": {
+        "displayName": "App Text",
+        "purpose": "Listen, Namen, Buttons."
+      },
+      "app-label": {
+        "displayName": "App Label",
+        "purpose": "Meta, Chips, Hinweise."
+      },
+      "portal-display": {
+        "displayName": "Ortsname-Lettering",
+        "purpose": "Ortsname auf der Kartenvorderseite, Versalien; 3rem / 3.75rem (sm) / 4.5rem (md)."
+      },
+      "portal-headline": {
+        "displayName": "Abschnitts-Lettering",
+        "purpose": "Unsere Zimmer, Ihre Angaben, Über unser Haus; Versalien."
+      },
+      "portal-title": {
+        "displayName": "Zimmername",
+        "purpose": "Titel der Zimmerkarte."
+      },
+      "portal-body": {
+        "displayName": "Kartentext",
+        "purpose": "Beschreibungen, max. 52–68ch."
+      },
+      "portal-label": {
+        "displayName": "Kartenlabel",
+        "purpose": "Feldlabels, pro-Nacht-Zeilen, MwSt.-Ausweis."
+      },
+      "portal-figure": {
+        "displayName": "Preisziffer",
+        "purpose": "Gesamtpreise, tabellarische Ziffern."
+      }
+    },
+    "acceptedExceptions": [
+      {
+        "name": "Inter als UI-Schrift",
+        "detector": "generische UI-Schrift (Inter)",
+        "status": "accepted",
+        "reason": "Projektvorgabe: Inter ist die einzige UI-Schrift (app/layout.tsx, globals.css). Portal-Eigenständigkeit kommt aus Barlow Condensed."
+      }
+    ],
+    "shadows": [
+      {
+        "name": "app-panel",
+        "value": "0 1px 3px rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1)",
+        "purpose": "Scope A: Panels, Primärbuttons, Header, Zimmerplan-Balken (shadow-sm)."
+      },
+      {
+        "name": "app-overlay",
+        "value": "0 25px 50px -12px rgba(0,0,0,0.25)",
+        "purpose": "Scope A: Drawer und Sidebar (shadow-2xl)."
+      },
+      {
+        "name": "portal-card-rest",
+        "value": "0 10px 30px -12px rgba(30,40,40,0.35)",
+        "purpose": "Kartenvorderseite (Rückseite mit -14px Spread)."
+      },
+      {
+        "name": "portal-searchbar",
+        "value": "0 12px 28px -14px rgba(20,30,30,0.45)",
+        "purpose": "Überlappende Suchleiste."
+      },
+      {
+        "name": "portal-card-chosen",
+        "value": "0 18px 40px -18px rgba(20,30,30,0.55)",
+        "purpose": "Gewählte Zimmerkarte, zusammen mit translateY(-2px)."
+      },
+      {
+        "name": "portal-confirmation",
+        "value": "0 12px 32px -16px rgba(20,30,30,0.5)",
+        "purpose": "Bestätigungskarte."
+      },
+      {
+        "name": "portal-mobile-bar",
+        "value": "0 -8px 24px -12px rgba(0,0,0,0.25)",
+        "purpose": "Fixierte Auswahlleiste mobil."
+      },
+      {
+        "name": "portal-stamp-edge",
+        "value": "drop-shadow(0 1px 1.5px rgba(0,0,0,0.18))",
+        "purpose": "Filter der gezähnten Briefmarke."
+      }
+    ],
+    "motion": [
+      {
+        "name": "portal-ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Stempelschlag und Kartendrehung."
+      },
+      {
+        "name": "portal-postmark-in",
+        "value": "420ms",
+        "purpose": "Poststempel entwertet die Marke bei Bestätigung (rotate -24deg scale 1.25 -> -12deg scale 1)."
+      },
+      {
+        "name": "portal-card-flip",
+        "value": "560ms",
+        "purpose": "Bestätigung dreht sich ein (perspective 1400px rotateY -90deg -> 0, Ursprung links)."
+      },
+      {
+        "name": "portal-select",
+        "value": "200ms",
+        "purpose": "Auswahl/Dimmen der Zimmerkarten."
+      },
+      {
+        "name": "app-drawer",
+        "value": "200ms slide-in-from-right",
+        "purpose": "Detail-Drawer."
+      },
+      {
+        "name": "app-sidebar",
+        "value": "300ms ease-in-out",
+        "purpose": "Off-Canvas-Navigation."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce -> animation: none",
+        "purpose": "Gilt für alle Portal-Animationen."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "App Primary Button",
+      "kind": "button",
+      "refersTo": "app-button-primary",
+      "description": "Scope A: Haupthandlung einer Seite oder Zeile (Neue Buchung, Check-in, Abrechnen).",
+      "html": "<button class=\"ds-app-btn-primary\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\"/></svg> Neue Buchung</button>",
+      "css": ".ds-app-btn-primary { font-family: Inter, system-ui, sans-serif; display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; font-size: 14px; font-weight: 500; color: #fff; background: #047857; border: none; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1); cursor: pointer; transition: background-color .15s; } .ds-app-btn-primary:hover { background: #065f46; } .ds-app-btn-primary:focus-visible { outline: 2px solid #059669; outline-offset: 2px; } .ds-app-btn-primary:disabled { opacity: .5; cursor: not-allowed; }"
+    },
+    {
+      "name": "App Secondary Button",
+      "kind": "button",
+      "refersTo": "app-button-secondary",
+      "description": "Scope A: Standardknopf (Zimmer zuweisen, Leistung buchen).",
+      "html": "<button class=\"ds-app-btn-secondary\">Leistung buchen</button>",
+      "css": ".ds-app-btn-secondary { font-family: Inter, system-ui, sans-serif; display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; font-size: 14px; font-weight: 500; color: #334155; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; cursor: pointer; transition: background-color .15s; } .ds-app-btn-secondary:hover { background: #f8fafc; } .ds-app-btn-secondary:focus-visible { outline: 2px solid #059669; outline-offset: 2px; }"
+    },
+    {
+      "name": "App Input",
+      "kind": "input",
+      "refersTo": "app-input",
+      "description": "Scope A: Eingabefeld mit Label in PMS-Formularen.",
+      "html": "<label class=\"ds-app-field\"><span>Nachname</span><input class=\"ds-app-input\" placeholder=\"z. B. Huber\"></label>",
+      "css": ".ds-app-field { font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column; gap: 4px; font-size: 14px; } .ds-app-field span { font-weight: 500; color: #334155; } .ds-app-input { font-family: Inter, system-ui, sans-serif; padding: 8px 12px; font-size: 14px; color: #1e293b; background: #fff; border: 1px solid #cbd5e1; border-radius: 10px; } .ds-app-input::placeholder { color: #94a3b8; } .ds-app-input:focus { outline: none; border-color: #059669; box-shadow: 0 0 0 2px rgba(5,150,105,.3); }"
+    },
+    {
+      "name": "App Panel",
+      "kind": "card",
+      "refersTo": "app-panel",
+      "description": "Scope A: weißes Panel mit Kopf, Zähler und Listenzeile.",
+      "html": "<section class=\"ds-app-panel\"><header><h2>Anreisen</h2><span>2</span></header><div class=\"ds-app-row\"><b>12</b><div><p>Familie Huber</p><small>Doppelzimmer · 3 N. · 2 Erw.</small></div></div></section>",
+      "css": ".ds-app-panel { font-family: Inter, system-ui, sans-serif; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1); max-width: 420px; overflow: hidden; } .ds-app-panel header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid #f1f5f9; } .ds-app-panel h2 { margin: 0; font-size: 16px; font-weight: 700; color: #1e293b; } .ds-app-panel header span { font-size: 14px; color: #64748b; font-variant-numeric: tabular-nums; } .ds-app-row { display: flex; gap: 12px; align-items: center; padding: 12px 16px; transition: background-color .15s; } .ds-app-row:hover { background: #f8fafc; } .ds-app-row b { width: 56px; text-align: center; padding: 6px 0; border-radius: 8px; background: #f1f5f9; color: #1e293b; font-size: 14px; font-variant-numeric: tabular-nums; } .ds-app-row p { margin: 0; font-size: 14px; font-weight: 600; color: #1e293b; } .ds-app-row small { font-size: 12px; color: #64748b; }"
+    },
+    {
+      "name": "App Chip",
+      "kind": "chip",
+      "refersTo": "app-chip-emerald",
+      "description": "Scope A: Statuschip mit Innenring (emerald, amber, red, sky).",
+      "html": "<span class=\"ds-app-chip ds-app-chip-emerald\">Im Haus</span> <span class=\"ds-app-chip ds-app-chip-amber\">Zimmer noch nicht gereinigt</span>",
+      "css": ".ds-app-chip { font-family: Inter, system-ui, sans-serif; display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 8px; font-size: 12px; font-weight: 500; white-space: nowrap; } .ds-app-chip-emerald { background: #ecfdf5; color: #065f46; box-shadow: inset 0 0 0 1px #a7f3d0; } .ds-app-chip-amber { background: #fffbeb; color: #92400e; box-shadow: inset 0 0 0 1px #fde68a; }"
+    },
+    {
+      "name": "App Navigation Item",
+      "kind": "nav",
+      "refersTo": "app-nav-item-active",
+      "description": "Scope A: Sidebar-Punkte mit Gruppenüberschrift, aktiv in Emerald.",
+      "html": "<nav class=\"ds-app-nav\"><p>Hotelbetrieb</p><a class=\"is-active\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 20a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1Z\"/><path d=\"M20 16a8 8 0 1 0-16 0\"/><path d=\"M12 4v4M10 4h4\"/></svg> Rezeption</a><a href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M16 2v4M8 2v4M3 10h18\"/></svg> Zimmerplan <span>3</span></a></nav>",
+      "css": ".ds-app-nav { font-family: Inter, system-ui, sans-serif; width: 224px; display: flex; flex-direction: column; gap: 4px; } .ds-app-nav p { margin: 0; padding: 16px 12px 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .025em; color: #64748b; } .ds-app-nav a { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; color: #475569; text-decoration: none; font-size: 16px; transition: background-color .15s, color .15s; } .ds-app-nav a svg { color: #94a3b8; } .ds-app-nav a:hover { background: #f8fafc; color: #0f172a; } .ds-app-nav a.is-active { background: #ecfdf5; color: #047857; font-weight: 500; } .ds-app-nav a.is-active svg { color: #059669; } .ds-app-nav a span { margin-left: auto; background: #059669; color: #fff; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 9999px; } .ds-app-nav a:focus-visible { outline: 2px solid #059669; outline-offset: 2px; }"
+    },
+    {
+      "name": "Portal Primary Button",
+      "kind": "button",
+      "refersTo": "portal-button-primary",
+      "description": "Scope B: Primäraktion in Hotelakzent (Verfügbarkeit prüfen, Verbindlich buchen).",
+      "html": "<button class=\"ds-portal-btn-primary\">Verfügbarkeit prüfen</button>",
+      "css": ".ds-portal-btn-primary { font-family: Inter, system-ui, sans-serif; --accent: #2f5d50; --on-accent: #fff; display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 20px; font-size: 15px; font-weight: 600; color: var(--on-accent); background: var(--accent); border: none; border-radius: 4px; cursor: pointer; transition: filter .15s, transform .15s; } .ds-portal-btn-primary:hover { filter: brightness(1.1); } .ds-portal-btn-primary:active { transform: translateY(1px); } .ds-portal-btn-primary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }"
+    },
+    {
+      "name": "Portal Rate Button",
+      "kind": "button",
+      "refersTo": "portal-button-rate",
+      "description": "Scope B: Rate wählen; gewählt vollflächig Akzent mit Häkchen.",
+      "html": "<div class=\"ds-portal-rates\"><button class=\"ds-portal-btn-rate\">Wählen</button><button class=\"ds-portal-btn-rate is-chosen\" aria-pressed=\"true\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg> Gewählt</button></div>",
+      "css": ".ds-portal-rates { --accent: #2f5d50; --on-accent: #fff; display: flex; gap: 12px; } .ds-portal-btn-rate { font-family: Inter, system-ui, sans-serif; display: inline-flex; align-items: center; justify-content: center; gap: 4px; height: 40px; width: 112px; font-size: 14px; font-weight: 600; color: #22262a; background: #fbfaf7; border: 1px solid var(--accent); border-radius: 4px; cursor: pointer; transition: background-color .15s; } .ds-portal-btn-rate:hover { background: color-mix(in oklab, var(--accent) 10%, white); } .ds-portal-btn-rate.is-chosen { background: var(--accent); color: var(--on-accent); } .ds-portal-btn-rate:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }"
+    },
+    {
+      "name": "Portal Input",
+      "kind": "input",
+      "refersTo": "portal-input",
+      "description": "Scope B: 48px-Feld mit Akzentfokus und Markenrot als Fehler.",
+      "html": "<label class=\"ds-portal-field\"><span>E-Mail <em>*</em></span><input class=\"ds-portal-input\" type=\"email\"><small>Hierhin senden wir die Bestätigung.</small></label>",
+      "css": ".ds-portal-field { font-family: Inter, system-ui, sans-serif; --accent: #2f5d50; display: flex; flex-direction: column; gap: 4px; font-size: 14px; max-width: 320px; } .ds-portal-field span { font-weight: 500; color: #3a4045; } .ds-portal-field em { font-style: normal; color: #8e2f1f; } .ds-portal-field small { font-size: 12px; color: #5a6065; } .ds-portal-input { font-family: Inter, system-ui, sans-serif; height: 48px; padding: 0 12px; font-size: 15px; color: #22262a; background: #fff; border: 1px solid #c3c9c6; border-radius: 4px; } .ds-portal-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in oklab, var(--accent) 30%, transparent); }"
+    },
+    {
+      "name": "Portal Search Field Button",
+      "kind": "input",
+      "refersTo": "portal-input",
+      "description": "Scope B: Feldknopf der überlappenden Suchleiste (Anreise, Abreise, Gäste).",
+      "html": "<button class=\"ds-portal-fieldbtn\" aria-expanded=\"false\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M16 2v4M8 2v4M3 10h18\"/></svg><span><small>Abreise · 3 Nächte</small><b>Mo., 21.12.</b></span></button>",
+      "css": ".ds-portal-fieldbtn { font-family: Inter, system-ui, sans-serif; --accent: #2f5d50; display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 8px 12px; text-align: left; background: #fff; border: 1px solid transparent; border-radius: 3px; color: #22262a; cursor: pointer; transition: background-color .15s, border-color .15s; } .ds-portal-fieldbtn svg { color: #6b7176; } .ds-portal-fieldbtn small { display: block; font-size: 12px; color: #5a6065; } .ds-portal-fieldbtn b { display: block; font-size: 15px; font-weight: 600; } .ds-portal-fieldbtn:hover { background: #f3f5f4; } .ds-portal-fieldbtn[aria-expanded=\"true\"] { border-color: var(--accent); background: #f6f8f7; } .ds-portal-fieldbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }"
+    },
+    {
+      "name": "Portal Room Card with Stamp",
+      "kind": "card",
+      "refersTo": "portal-room-card",
+      "description": "Scope B: Zimmerkarte in Kartenweiß mit gezähnter Briefmarke und Verfügbarkeitschip.",
+      "html": "<article class=\"ds-portal-room\"><div class=\"ds-portal-stamp\"><div><svg viewBox=\"0 0 100 120\" preserveAspectRatio=\"xMidYMax slice\"><rect width=\"100\" height=\"120\" fill=\"#000\" opacity=\"0.1\"/><path d=\"M0 70 L18 52 L40 66 L50 34 L68 58 L86 48 L100 60 L100 120 L0 120Z\" fill=\"#fff\" opacity=\"0.24\"/><path d=\"M0 92 L24 86 L48 98 L76 88 L100 98 L100 120 L0 120Z\" fill=\"#000\" opacity=\"0.2\"/></svg><i>ab 144 €</i><b>Doppelzimmer Bergblick</b></div></div><div><h3>Doppelzimmer Bergblick <span class=\"ds-portal-chip\">Nur noch 2 Zimmer frei</span></h3><p>24 m² · bis 2 Personen</p></div></article>",
+      "css": ".ds-portal-room { font-family: Inter, system-ui, sans-serif; --accent: #2f5d50; display: grid; grid-template-columns: 112px 1fr; gap: 16px; padding: 16px; max-width: 560px; background: #fbfaf7; border: 1px solid #dfe3e1; border-radius: 3px; color: #22262a; transition: box-shadow .2s, transform .2s, border-color .2s; } .ds-portal-room:hover { border-color: var(--accent); box-shadow: 0 18px 40px -18px rgba(20,30,30,.55); transform: translateY(-2px); } .ds-portal-room h3 { margin: 0; display: flex; justify-content: space-between; gap: 8px; font-size: 18px; font-weight: 600; line-height: 1.25; } .ds-portal-room p { margin: 4px 0 0; font-size: 14px; color: #4a5055; } .ds-portal-chip { font-size: 12px; font-weight: 600; padding: 4px 8px; border-radius: 3px; background: #f8e3de; color: #8e2f1f; white-space: nowrap; align-self: flex-start; } .ds-portal-stamp { width: 112px; height: 136px; padding: 7px; box-sizing: border-box; background: radial-gradient(circle at 5px 5px, #0000 2.6px, #fff 3.1px) -5px -5px / 10px 10px; filter: drop-shadow(0 1px 1.5px rgba(0,0,0,.18)); } .ds-portal-stamp > div { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--accent); } .ds-portal-stamp svg { width: 100%; height: 100%; display: block; } .ds-portal-stamp b, .ds-portal-stamp i { position: absolute; color: #fff; font-family: 'Barlow Condensed', Inter, sans-serif; font-weight: 700; font-style: normal; text-transform: uppercase; font-size: 13px; line-height: .95; text-shadow: 0 1px 2px rgba(0,0,0,.4); } .ds-portal-stamp b { left: 6px; right: 6px; bottom: 4px; } .ds-portal-stamp i { top: 4px; right: 6px; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Portal Postmark",
+      "kind": "custom",
+      "refersTo": "portal-stamp",
+      "description": "Scope B: Poststempel in Stempeltinte, trägt live die Reisedaten; Stempelschlag bei Bestätigung.",
+      "html": "<svg class=\"ds-portal-postmark\" viewBox=\"0 0 220 120\" aria-hidden=\"true\"><path d=\"M110 34 q 14 -8 28 0 t 28 0 t 28 0 t 28 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" opacity=\"0.85\"/><path d=\"M110 48 q 14 -8 28 0 t 28 0 t 28 0 t 28 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" opacity=\"0.85\"/><path d=\"M110 62 q 14 -8 28 0 t 28 0 t 28 0 t 28 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" opacity=\"0.85\"/><path d=\"M110 76 q 14 -8 28 0 t 28 0 t 28 0 t 28 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" opacity=\"0.85\"/><defs><path id=\"ds-pm-top\" d=\"M 22 82 A 43 43 0 1 1 98 82\"/><path id=\"ds-pm-bottom\" d=\"M 30 84 A 36 36 0 0 0 90 84\"/></defs><circle cx=\"60\" cy=\"60\" r=\"50\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" opacity=\"0.85\"/><circle cx=\"60\" cy=\"60\" r=\"34\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" opacity=\"0.6\"/><text font-size=\"7\" font-weight=\"700\" letter-spacing=\"1\" fill=\"currentColor\"><textPath href=\"#ds-pm-top\" startOffset=\"50%\" text-anchor=\"middle\">ASCHAU IM CHIEMGAU</textPath></text><text font-size=\"8\" letter-spacing=\"1\" fill=\"currentColor\" opacity=\"0.8\"><textPath href=\"#ds-pm-bottom\" startOffset=\"50%\" text-anchor=\"middle\">DIREKT GEBUCHT</textPath></text><text x=\"60\" y=\"57\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\">18.12.</text><text x=\"60\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\">21.12.</text></svg>",
+      "css": ".ds-portal-postmark { width: 150px; height: 82px; color: #3d3a6e; font-family: Inter, system-ui, sans-serif; transform: rotate(-12deg); animation: ds-postmark-in 420ms cubic-bezier(0.16, 1, 0.3, 1) both; } @keyframes ds-postmark-in { from { opacity: 0; transform: rotate(-24deg) scale(1.25); } to { opacity: 1; transform: rotate(-12deg) scale(1); } } @media (prefers-reduced-motion: reduce) { .ds-portal-postmark { animation: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "\"Die Ansichtskarte\" (Portal) · \"Der Rezeptionstresen\" (App)",
+    "overview": "**Scope A – Der Rezeptionstresen.** Ein ruhiges, dichtes Arbeitswerkzeug für Hoteliers, die zwischen anderen Aufgaben hineinschauen. Hellgraue Fläche (`app-canvas`), darauf weiße Panels mit dünner Slate-Kante und kaum sichtbarem Schatten; jede Seite beginnt mit einem Seitentitel plus Tagesbezug und beantwortet „Was ist heute zu tun?“. Farbe ist Status, nicht Dekoration: Emerald heißt „handeln / im Haus / erledigt“, Sky „erwartet / Abreise“, Amber „offen / zu reinigen“, Rot „Fehler / Stornierung“. Lucide-Linienicons in 16–20 px begleiten Titel und Navigation.\n\n**Scope B – Die Ansichtskarte.** Die Buchung ist eine Karte, die der Gast ans Hotel schreibt: vorne das Haus mit dem Ortsnamen in kräftigen Versalien, hinten die Reisedaten mit Briefmarke, Poststempel und Adresslinien. Kartenweiß liegt auf kühlem Postgrau; die Hotelfarbe ist die einzige laute Fläche (Kopfband, Primäraktion, Kalenderauswahl). Die Postkarten-Requisiten sind **Statusträger**: die Briefmarke zeigt Zimmer und „ab“-Preis, der Stempel trägt live An- und Abreise, bei der Bestätigung entwertet er die Marke und die Karte dreht sich. Ohne Hotelfoto trägt eine geschichtete Bergsilhouette in der Hotelfarbe die Seite.\n\nBeide Welten teilen Inter für alles Bedienbare, tabellarische Ziffern für Preise und Daten, Deutsch in Sie-Form und das Ziel WCAG 2.2 AA mit großen Klickflächen.",
+    "keyCharacteristics": [
+      "Zwei Welten, klar getrennt: App = Slate/Emerald/weiche Panels, Portal = Postgrau/Kartenweiß/Hotelakzent/fast eckig.",
+      "Inter ist die UI-Schrift in beiden Welten; Barlow Condensed nur als Ortsname-Lettering im Portal.",
+      "Farbe codiert Zustand (Belegung, Verfügbarkeit, Knappheit), nie Schmuck.",
+      "Preise und Daten immer `tabular-nums`, Gesamtpreis inkl. Kurtaxe-Ausweis sichtbar.",
+      "Portal: Briefmarke, Poststempel, Adresslinien sind funktionale Bauteile, keine Ornamente."
+    ],
+    "rules": [
+      {
+        "name": "The Accent-Is-The-Hotel Rule",
+        "body": "Im Portal gibt es keine Lobbio-Markenfarbe. Jede laute Fläche ist `var(--accent)`, jede Schrift darauf `var(--on-accent)`; Varianten nur per `color-mix` mit Weiß. Lobbio erscheint nur als „Buchungssystem: Lobbio“ im Fuß.",
+        "section": "colors"
+      },
+      {
+        "name": "The Status-Not-Paint Rule",
+        "body": "In beiden Welten bedeutet eine Farbe einen Zustand. Emerald/„Frei“-Grün = verfügbar oder im Haus, Amber = offen, Markenrot = knapp oder fehlerhaft. Wer eine Farbe dekorativ einsetzt, entwertet die Statussprache.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-For-Props Rule",
+        "body": "Stempeltinte erscheint nur auf Postkarten-Requisiten (Stempel, Rückseiten-Schriftzug, Buchungsnummer), nie auf Buttons oder Links.",
+        "section": "colors"
+      },
+      {
+        "name": "The Inter-Stays Rule",
+        "body": "Inter bleibt die UI-Schrift beider Welten; das ist eine Projektvorgabe (`app/layout.tsx`, `globals.css`). Der Detektor meldet Inter als generische Wahl; der Befund ist geprüft und **akzeptiert**, nicht zu „beheben“. Eigenständigkeit im Portal kommt allein aus dem Barlow-Lettering.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lettering-Only Rule",
+        "body": "Barlow Condensed nur in Versalien und nur für Ortsname, Abschnittstitel, Marke und Postkarten-Schriftzüge. Nie für Bedienelemente, Formularfelder, Preise oder Fließtext.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Jede Zahl, die verglichen wird (Preis, Datum, Zimmernummer, Belegung, Zähler), steht in `tabular-nums`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper-On-Grey Rule",
+        "body": "Im Portal liegt jedes Kartenelement in Kartenweiß auf Postgrau und trägt einen weichen, nach unten verschobenen Schatten mit negativem Spread. Keine harten Versatzschatten, keine Glows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Lift-Means-Chosen Rule",
+        "body": "Im Portal hebt sich eine Zimmerkarte nur, wenn sie gewählt ist; die übrigen werden auf 75 % Deckkraft und 35 % Sättigung zurückgenommen und kehren bei Hover/Fokus zurück.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do zuerst den Scope wählen: interne Seiten bauen mit `components/pms/ui.tsx` (PageHeader, Panel, Button, Field, Chip, Notice, Drawer), das Portal mit seinen eigenen Bausteinen.",
+      "Do im Portal jede laute Fläche aus `var(--accent)` / `var(--on-accent)` ableiten und Töne nur per `color-mix(in oklab, var(--accent) N%, white)` bilden.",
+      "Do Preise immer als Gesamtpreis inkl. Kurtaxe mit `tabular-nums` zeigen, pro Nacht darunter, MwSt. 7 % / 19 % getrennt.",
+      "Do Briefmarke und Poststempel als Statusträger einsetzen (Zimmer, Preis, Reisedaten, Bestätigung), nie als reine Dekoration.",
+      "Do Klickflächen von mindestens 40px (Portal-Hauptaktionen 48px) und sichtbare Fokus-Outlines (App Emerald, Portal Akzent, je 2px mit 2px Abstand) beibehalten.",
+      "Do Bewegung bei `prefers-reduced-motion` abschalten.",
+      "Do ohne Hotelfoto die Bergsilhouette in der Akzentfarbe zeigen; die Seite muss ohne Foto vollständig wirken."
+    ],
+    "donts": [
+      "Don't die Welten mischen: kein Emerald, keine 10–14px-Radien und keine Slate-Panels im Portal; keine Postkarten-Requisiten, kein Barlow und kein Postgrau in der App.",
+      "Don't Barlow Condensed für Bedienelemente, Preise, Formulare oder gemischte Groß-/Kleinschreibung verwenden.",
+      "Don't Inter als Detektor-Befund „korrigieren“; die Schrift ist bestätigte Projektvorgabe.",
+      "Don't Lobbio-Branding im Portal über die Fußzeile „Buchungssystem: Lobbio“ hinaus zeigen.",
+      "Don't Markenrot oder Amber dekorativ einsetzen; sie bedeuten Knappheit, Fehler oder Offenes.",
+      "Don't im Portal harte Versatzschatten, Glows oder runde Pillen für Kalendertage verwenden.",
+      "Don't Bewertungen, Siegel oder Hotelfotos erfinden; Platzhalter bleiben als solche erkennbar."
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "external_review_id": "g_rev_001",
+    "guest_name": "Klaus M.",
+    "rating": 5,
+    "content": "Traumhafter Ausblick auf die Kampenwand! Das Frühstücksbuffet lässt keine Wünsche offen und die Gastgeberfamilie ist unglaublich herzlich. Wir kommen nächstes Jahr definitiv wieder.",
+    "created_at": "2026-08-16T09:30:00Z"
+  },
+  {
+    "external_review_id": "g_rev_002",
+    "guest_name": "Sabine W.",
+    "rating": 4,
+    "content": "Schönes familiengeführtes Hotel nahe dem Chiemsee. Die vom Hotel geliehenen E-Bikes waren top in Schuss. Einziger Sternabzug: Das WLAN im Nebenhaus war leider sehr instabil.",
+    "created_at": "2026-08-15T14:15:00Z"
+  },
+  {
+    "external_review_id": "g_rev_003",
+    "guest_name": "Jonas B.",
+    "rating": 2,
+    "content": "Leider war unser Zimmer zur Straßenseite sehr laut. Das Badezimmer hat seine besten Jahre hinter sich (70er Jahre Charme). Beim Frühstück fehlten uns zudem vegane Alternativen, es gab nur Kuhmilch.",
+    "created_at": "2026-08-14T11:45:00Z"
+  },
+  {
+    "external_review_id": "g_rev_004",
+    "guest_name": "Familie Huber",
+    "rating": 5,
+    "content": "Perfekter Ausgangspunkt für unsere Wanderungen in Ruhpolding. Dass unser Hund so willkommen war, hat uns riesig gefreut. Das Abendessen im hauseigenen Restaurant war exzellent, besonders der Kaiserschmarrn!",
+    "created_at": "2026-08-13T19:20:00Z"
+  },
+  {
+    "external_review_id": "g_rev_005",
+    "guest_name": "Thomas S.",
+    "rating": 1,
+    "content": "Der Check-in verzögerte sich um über eine Stunde. Das Zimmer war bei Bezug staubig und auf unsere Nachfrage wurde von der Rezeption sehr unfreundlich reagiert. Für diesen Preis im Chiemgau absolut nicht gerechtfertigt.",
+    "created_at": "2026-08-12T08:10:00Z"
+  },
+  {
+    "external_review_id": "g_rev_006",
+    "guest_name": "Petra L.",
+    "rating": 3,
+    "content": "Die Lage mitten in der Natur ist traumhaft. Das Hotel selbst ist in Ordnung, aber die Matratzen waren uns viel zu hart. Das alte Bauern-Mobiliar ist sehr rustikal, wer es mag... Für ein Wochenende okay.",
+    "created_at": "2026-08-10T16:55:00Z"
+  },
+  {
+    "external_review_id": "g_rev_007",
+    "guest_name": "Markus & Lisa",
+    "rating": 5,
+    "content": "Klein, aber fein! Der kleine Saunabereich war blitzsauber und eine echte Wohltat nach dem langen Radfahren. Der Chef hat uns beim Frühstück persönlich die besten Radwege abseits der Touristenströme gezeigt.",
+    "created_at": "2026-08-09T07:40:00Z"
+  },
+  {
+    "external_review_id": "g_rev_008",
+    "guest_name": "Andreas G.",
+    "rating": 4,
+    "content": "Das Zimmer war sehr sauber und geräumig. Das Frühstück war reichhaltig mit tollen regionalen Produkten aus Bayern. Leider war der Kaffeevollautomat am Sonntagmorgen defekt, weshalb es längere Wartezeiten gab.",
+    "created_at": "2026-08-07T10:05:00Z"
+  },
+  {
+    "external_review_id": "g_rev_009",
+    "guest_name": "Miriam K.",
+    "rating": 5,
+    "content": "Toller Kurzurlaub mit den Kindern. Zum Strandbad am See sind es nur 10 Minuten zu Fuß. Die Bereitstellung des Babybetts lief völlig unkompliziert und kostenlos. Sehr familienfreundlich, wir fühlten uns rundum wohl!",
+    "created_at": "2026-08-05T20:30:00Z"
+  },
+  {
+    "external_review_id": "g_rev_010",
+    "guest_name": "Dirk F.",
+    "rating": 2,
+    "content": "Bei der Hitzewelle im August war das Zimmer im Dachgeschoss unerträglich warm. Es gab weder einen Ventilator noch eine Klimaanlage, schlafen war kaum möglich. Schade, denn das Personal war an sich sehr nett.",
+    "created_at": "2026-08-02T15:15:00Z"
+  }
+]

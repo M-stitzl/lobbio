@@ -1,0 +1,76 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Umgebungsvariablen und Geheimnisse – niemals committen
+.env
+.env.*
+!.env.example
+*.key
+*.p12
+*.pfx
+*.crt
+service-account*.json
+credentials*.json
+client_secret*.json
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Impeccable: Laufzeitdateien (PRODUCT.md, .impeccable/surfaces, config/design.json werden committet)
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/*.log
+.impeccable/decision-*.json
+.impeccable/config.local.json
+.playwright-cli/
+
+# Supabase-CLI-Cache
+supabase/.temp/
+
+# Lokale KI- und Editor-Werkzeuge (nicht Teil des Produkts)
+.claude/
+skills-lock.json
+.vscode/
+.idea/
+
+# Private Unterlagen (z. B. Hochschul- oder Kursmaterial) – gehören nicht ins Repository
+/private/
+/unterlagen/
+*.pdf
+*.docx
+*.pptx
+*.xlsx
